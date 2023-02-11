@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blueviolet;
+            position: relative;
+        }
+        input {
+           font-size: 1.5em;
+           padding: 10px;
+           position:absolute;
+           top: 30%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           text-align: center;
+           width:40%;
+           font-weight: 400;
+           outline-color: azure;
+           border-radius: 8px;  
+        }
+        h2 {
+            position: absolute;
+            top: 42%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 200;
+            letter-spacing: 2px;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            color:azure;
+            margin: 35px 5px;   
+        }
+        p {
+            position:absolute;
+            bottom: 10px;
+            position: fixed;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 10px;
+            left: 40%;
+            border: 2px solid lightskyblue;
+            color:azure;
+            letter-spacing: 2px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- JavaScript program to check if a number is positive, negativ or zero ? -->
+    <h1>Check if a number is positive, negative or zero.</h1>
+    <input type="text" id="data" onkeyup="check()">
+    <br><br><br>
+    <h2 id="result"></h2>
+    <p>Author : Pushpendra Prajapati</p>
+    
+
+    <script>
+        function check(){
+            let value = document.getElementById('data').value;
+            if(value > 0){
+                res = `${value} is Positive Number`;
+            }
+            else if(value < 0){
+                res = `${value} is Negative Number`;
+            }
+            else if(parseInt(value) === 0){
+                res = `${value} Zero`;
+            }
+            else if(value == 0){
+                res = `Please inter the value`;
+            }
+            else{
+                res = `${value} is not a number`;
+            }
+            document.getElementById('result').innerText = res;
+        }
+    </script>
+</body>
+</html>
